@@ -9,12 +9,16 @@ import {
   generateBarChartData 
 } from '@/lib/data';
 import { Calendar, Download, Filter, FileText, TrendingUp, Users, DollarSign } from 'lucide-react';
+import type { LineChartData, BarChartData } from '@/types/dashboard';
 
 export default function ReportsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedReport, setSelectedReport] = useState('performance');
   const [dateRange, setDateRange] = useState('30d');
-  const [data, setData] = useState({
+  const [data, setData] = useState<{
+    lineChartData: LineChartData[];
+    barChartData: BarChartData[];
+  }>({
     lineChartData: [],
     barChartData: []
   });
