@@ -102,6 +102,7 @@ export interface TableProps {
   onSort?: (column: string) => void;
   onPageChange?: (page: number) => void;
   onSearch?: (query: string) => void;
+  className?: string;
 }
 
 /**
