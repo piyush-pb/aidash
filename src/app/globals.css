@@ -1,26 +1,258 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+
+  * {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600;
+    border-radius: 3px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-500;
+  }
+
+  /* Loading skeleton */
+  .skeleton {
+    @apply animate-pulse bg-gray-200 dark:bg-gray-700 rounded;
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors;
+  }
+
+  /* Responsive sidebar styles */
+  .sidebar-responsive {
+    @apply fixed left-0 top-0 h-full bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 z-50 transition-all duration-300 ease-in-out;
+  }
+
+  .sidebar-mobile {
+    @apply -translate-x-full lg:translate-x-0;
+  }
+
+  .sidebar-tablet {
+    @apply md:translate-x-0;
+  }
+
+  .sidebar-desktop {
+    @apply lg:translate-x-0;
+  }
+
+  /* Main content responsive adjustments */
+  .main-content-responsive {
+    @apply transition-all duration-300 ease-in-out w-full overflow-x-hidden;
+  }
+
+  .main-content-mobile {
+    @apply lg:ml-0;
+  }
+
+  .main-content-tablet {
+    @apply md:ml-0 lg:ml-64;
+  }
+
+  .main-content-desktop {
+    @apply lg:ml-64;
+  }
+
+  .main-content-collapsed {
+    @apply lg:ml-16;
+  }
+
+  .main-content-mobile-sidebar-open {
+    @apply ml-64 md:ml-64 lg:ml-64;
+  }
+
+  /* Ensure mobile menu button is always visible */
+  .mobile-menu-button {
+    @apply block lg:hidden;
+  }
+
+  /* Responsive grid layouts */
+  .grid-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4;
+  }
+
+  .grid-charts-responsive {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-6;
+  }
+
+  /* Container and spacing */
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .spacing-responsive {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+
+  .gap-responsive {
+    @apply gap-3 sm:gap-4 lg:gap-6;
+  }
+
+  /* Text responsive sizing */
+  .text-responsive {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  /* Enhanced shadows */
+  .shadow-large {
+    @apply shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  /* Custom text colors */
+  .text-text-primary {
+    @apply text-gray-900 dark:text-gray-100;
+  }
+
+  .text-text-secondary {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+
+  /* Custom background colors */
+  .bg-primary-50 {
+    @apply bg-blue-50 dark:bg-blue-900/20;
+  }
+
+  .bg-primary-100 {
+    @apply bg-blue-100 dark:bg-blue-900/30;
+  }
+
+  .bg-primary-500 {
+    @apply bg-blue-500;
+  }
+
+  .bg-primary-600 {
+    @apply bg-blue-600;
+  }
+
+  .text-primary-600 {
+    @apply text-blue-600 dark:text-blue-400;
+  }
+
+  .border-primary-200 {
+    @apply border-blue-200 dark:border-blue-700;
+  }
+
+  .border-primary-500 {
+    @apply border-blue-500;
+  }
+
+  /* Error colors */
+  .bg-error-100 {
+    @apply bg-red-100 dark:bg-red-900/20;
+  }
+
+  .text-error-600 {
+    @apply text-red-600 dark:text-red-400;
+  }
+
+  .bg-error-500 {
+    @apply bg-red-500;
+  }
+
+  .bg-error-50 {
+    @apply bg-red-50 dark:bg-red-900/10;
+  }
+
+  /* Tablet-specific improvements */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .sidebar-tablet-open {
+      @apply translate-x-0;
+    }
+
+    .main-content-tablet-sidebar-open {
+      @apply ml-64;
+    }
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 767px) {
+    .sidebar-responsive {
+      @apply w-64;
+    }
+    
+    .main-content-mobile-sidebar-open {
+      @apply ml-0;
+    }
+    
+    .main-content-responsive {
+      @apply ml-0;
+    }
+  }
+
+  /* Improved touch targets for mobile */
+  @media (max-width: 767px) {
+    .touch-target {
+      @apply min-h-[44px] min-w-[44px];
+    }
+  }
 }

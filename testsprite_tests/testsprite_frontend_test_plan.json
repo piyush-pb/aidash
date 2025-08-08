@@ -1,0 +1,324 @@
+[
+  {
+    "id": "TC001",
+    "title": "Dashboard Layout Responsiveness",
+    "description": "Verify the dashboard layout renders correctly and is fully responsive across all supported device breakpoints including mobile, tablet, and desktop.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open the dashboard page on a desktop device"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that sidebar, header and main content panels are laid out correctly with no overlap or content cut-off"
+      },
+      {
+        "type": "action",
+        "description": "Resize the browser window to tablet size dimensions"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the sidebar collapses appropriately and header adjusts for tablet usability"
+      },
+      {
+        "type": "action",
+        "description": "Simulate viewing the dashboard on a mobile device"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sidebar is accessible via mobile-optimized header menu and content is fully visible without horizontal scrolling"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Metric Cards Data Accuracy",
+    "description": "Validate metric cards correctly display values, percentage changes, and trend icons consistent with mocked data sources.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Load dashboard with mocked metric data"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify each metric card shows correct KPI value as per data"
+      },
+      {
+        "type": "assertion",
+        "description": "Check percentage change value matches expected computation from mocked data"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the trend icon reflects the positive, negative, or neutral change correctly"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Interactive Charts Rendering and Tooltips",
+    "description": "Ensure all charts (line, bar, donut) render correctly with appropriate axis labels, legends, color schemes, and interactive tooltips.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to dashboard charts section"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate line chart displays revenue trend with correctly labeled X and Y axes"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate bar chart displays traffic sources by channel with correct bar heights and labels"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate donut chart shows device distribution with appropriate color segments and legend"
+      },
+      {
+        "type": "action",
+        "description": "Hover mouse over various data points on each chart"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm tooltips show accurate and well-formatted data values matching underlying data"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Campaign Data Table Functionalities",
+    "description": "Test the campaign performance data table supports sorting, search, filtering, and pagination without errors.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open campaign data table section on the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Sort the table by each column (e.g., campaign name, performance metrics)"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that sorting results reorder the table correctly in ascending and descending order"
+      },
+      {
+        "type": "action",
+        "description": "Enter search terms to filter campaign rows"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify table updates to show only matching rows or shows 'no results' if none match"
+      },
+      {
+        "type": "action",
+        "description": "Apply various column filters (e.g., date range, campaign status)"
+      },
+      {
+        "type": "assertion",
+        "description": "Check the filtered table rows meet the filter criteria precisely"
+      },
+      {
+        "type": "action",
+        "description": "Navigate through table pagination controls"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure pagination changes the displayed rows accurately and page counts are correct"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Simulated Real-Time Data Refresh",
+    "description": "Verify the dashboard refresh mechanism updates metrics, charts, and tables with new simulated real-time data and provides visual feedback.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Trigger the data refresh action on the dashboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that metric cards update their displayed values and trend icons accordingly"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate charts redraw with updated data smoothly and maintain interactive elements functionality"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure the campaign data table reflects any new or updated campaign entries post-refresh"
+      },
+      {
+        "type": "assertion",
+        "description": "Check for a visible loading or refresh indicator during data update"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the refresh completes within acceptable timeframe (e.g., under 3 seconds)"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Accessibility Compliance",
+    "description": "Ensure the dashboard meets accessibility standards including ARIA attributes, keyboard navigation, and adequate contrast ratios.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate through the dashboard using the keyboard tab key only"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate all interactive elements (sidebar, buttons, charts, table controls) are accessible via keyboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Check all ARIA attributes are present and correctly describe component roles and states"
+      },
+      {
+        "type": "assertion",
+        "description": "Use automated tools to analyze color contrast on text and UI elements ensuring they meet WCAG AA standards"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Code Quality and Linting Validation",
+    "description": "Verify the entire codebase passes ESLint rules, TypeScript strict type checks, and Prettier formatting without errors.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Run ESLint across the full codebase"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm zero linting errors or warnings"
+      },
+      {
+        "type": "action",
+        "description": "Execute TypeScript compilation with strict type checking enabled"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure no type errors are reported"
+      },
+      {
+        "type": "action",
+        "description": "Run Prettier formatting check"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate all files conform to Prettier formatting rules"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Build and Deployment Verification",
+    "description": "Confirm that the application builds successfully and deploys on a platform like Vercel without runtime or build errors.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Run the full build command used for production deployment"
+      },
+      {
+        "type": "assertion",
+        "description": "Check build completes without errors or warnings"
+      },
+      {
+        "type": "action",
+        "description": "Deploy the built application to a vercel-like environment"
+      },
+      {
+        "type": "assertion",
+        "description": "Navigate through the deployed application confirming no runtime errors or missing resources"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate all main features (dashboard layout, metric cards, charts, data table) load and function normally post deployment"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Error Handling on Data Fetch Failures",
+    "description": "Test how the dashboard behaves when simulated data fetches fail or return invalid data, ensuring graceful error handling.",
+    "category": "error handling",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Simulate a failure in fetching metric data"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify metric cards display a friendly error message or placeholder data"
+      },
+      {
+        "type": "action",
+        "description": "Simulate corrupted or empty chart data response"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm charts either show no data messages or safe fallback visuals without crashing"
+      },
+      {
+        "type": "action",
+        "description": "Simulate failure in campaign data table fetch"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure table displays an error notice and allows UI recovery when data is restored"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Sidebar Collapse and Navigation Functionality",
+    "description": "Validate the collapsible sidebar toggling works correctly and that navigation links lead to the expected dashboard sections.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Click sidebar toggle button to collapse the sidebar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sidebar visually collapses and expands correctly"
+      },
+      {
+        "type": "action",
+        "description": "Click on each navigation item in the sidebar"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm that the main content updates to the selected dashboard section (metrics, charts, campaign data)"
+      },
+      {
+        "type": "action",
+        "description": "Repeat navigation on mobile device or viewport"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that navigation remains functional and accessible in mobile layout"
+      }
+    ]
+  }
+]

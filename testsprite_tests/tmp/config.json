@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "aidashboardass",
+    "projectPath": "c:/Users/piyus/aidashboardass",
+    "testIds": [],
+    "additionalInstruction": "Focus on testing the chart rendering fixes, data table sorting improvements, and error handling enhancements that were implemented",
+    "envs": {
+      "API_KEY": "sk-user-bUXnroFBuKNOWE8ZprxPDtsFTYtM17Sh_S_4klFRrMxjENzqE72oIMdvPAh82S7FOOYWKg3SWZIygm7zFKhxhXj83sbq0ZT7GS-Mxx7swjqG6LxQeirI_FguecqRx5f9-oo"
+    }
+  },
+  "proxy": "http://d3c53fac-00fd-47f4-865b-c8276adf9dd3:beJQFZXMZIq6iMrxH1rn8fYxRBj9lq15@tun.testsprite.com:8080"
+}

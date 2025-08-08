@@ -1,0 +1,142 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "Next.js 14",
+    "React 18",
+    "Tailwind CSS",
+    "Recharts",
+    "Lucide React",
+    "ESLint",
+    "PostCSS"
+  ],
+  "features": [
+    {
+      "name": "Dashboard Layout System",
+      "description": "Responsive dashboard layout with sidebar, header, and main content area supporting mobile, tablet, and desktop views",
+      "files": [
+        "src/components/layout/DashboardLayout.tsx",
+        "src/components/layout/Header.tsx",
+        "src/components/layout/Sidebar.tsx",
+        "src/app/globals.css"
+      ]
+    },
+    {
+      "name": "Error Boundary and Error Handling",
+      "description": "Comprehensive error handling system with error boundaries, fallback UI, and error simulation for testing",
+      "files": [
+        "src/components/layout/ErrorBoundary.tsx",
+        "src/lib/hooks.ts",
+        "src/lib/data.ts"
+      ]
+    },
+    {
+      "name": "Data Visualization Charts",
+      "description": "Interactive charts including line charts, bar charts, and donut charts for analytics data visualization",
+      "files": [
+        "src/components/charts/LineChart.tsx",
+        "src/components/charts/BarChart.tsx",
+        "src/components/charts/DonutChart.tsx"
+      ]
+    },
+    {
+      "name": "Metric Cards System",
+      "description": "Display key performance indicators with trend indicators, icons, and various data formats",
+      "files": [
+        "src/components/dashboard/MetricCard.tsx"
+      ]
+    },
+    {
+      "name": "Data Table Component",
+      "description": "Advanced data table with sorting, filtering, pagination, and search functionality for campaign data",
+      "files": [
+        "src/components/dashboard/DataTable.tsx"
+      ]
+    },
+    {
+      "name": "Data Generation and Management",
+      "description": "Mock data generation system with realistic analytics data, campaign information, and user data",
+      "files": [
+        "src/lib/data.ts",
+        "src/types/dashboard.ts"
+      ]
+    },
+    {
+      "name": "Custom Hooks",
+      "description": "Reusable React hooks for data fetching, error handling, and real-time data updates",
+      "files": [
+        "src/lib/hooks.ts"
+      ]
+    },
+    {
+      "name": "Utility Functions",
+      "description": "Helper functions for class name merging, data formatting, and common utilities",
+      "files": [
+        "src/lib/utils.ts"
+      ]
+    },
+    {
+      "name": "Page Components",
+      "description": "Main application pages including dashboard, analytics, campaigns, reports, and settings",
+      "files": [
+        "src/app/dashboard/page.tsx",
+        "src/app/analytics/page.tsx",
+        "src/app/campaigns/page.tsx",
+        "src/app/reports/page.tsx",
+        "src/app/settings/page.tsx",
+        "src/app/page.tsx"
+      ]
+    },
+    {
+      "name": "TypeScript Type Definitions",
+      "description": "Comprehensive type definitions for dashboard data, charts, and component props",
+      "files": [
+        "src/types/dashboard.ts"
+      ]
+    },
+    {
+      "name": "Responsive Design System",
+      "description": "Mobile-first responsive design with custom CSS utilities and breakpoint management",
+      "files": [
+        "src/app/globals.css",
+        "tailwind.config.ts"
+      ]
+    },
+    {
+      "name": "Navigation System",
+      "description": "Sidebar navigation with active states, breadcrumbs, and mobile-responsive menu",
+      "files": [
+        "src/components/layout/Sidebar.tsx",
+        "src/components/layout/Header.tsx"
+      ]
+    },
+    {
+      "name": "Real-time Data Updates",
+      "description": "Simulated real-time data refresh functionality with loading states and error handling",
+      "files": [
+        "src/lib/hooks.ts",
+        "src/lib/data.ts"
+      ]
+    },
+    {
+      "name": "Accessibility Features",
+      "description": "ARIA attributes, keyboard navigation, screen reader support, and accessibility compliance",
+      "files": [
+        "src/components/layout/Header.tsx",
+        "src/components/layout/Sidebar.tsx",
+        "src/components/dashboard/MetricCard.tsx",
+        "src/components/dashboard/DataTable.tsx"
+      ]
+    },
+    {
+      "name": "Configuration and Build System",
+      "description": "Next.js configuration, ESLint setup, TypeScript configuration, and build optimization",
+      "files": [
+        "next.config.ts",
+        "eslint.config.mjs",
+        "tsconfig.json",
+        "postcss.config.mjs",
+        "package.json"
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "project": "ADmyBRAND Insights Analytics Dashboard",
+    "date": "2025-07-30",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "ADmyBRAND Insights is a modern, responsive analytics dashboard designed for marketing agencies and their clients to monitor campaign performance and marketing insights. Built with Next.js 14, TypeScript, and Tailwind CSS, it provides interactive visualizations, real-time simulated data updates, and advanced data tables for comprehensive marketing analytics.",
+  "core_goals": [
+    "Provide marketing agencies and clients with real-time, actionable insights into campaign performance through interactive and visually appealing dashboards.",
+    "Ensure a responsive and accessible user experience across devices including mobile, tablet, and desktop.",
+    "Deliver a modular and maintainable codebase leveraging modern technologies such as Next.js, TypeScript, Tailwind CSS, and Recharts.",
+    "Support key performance monitoring through metric cards, various chart types, and detailed campaign data tables with sorting, filtering, and pagination.",
+    "Facilitate performance trend tracking and marketing channel analysis for data-driven decision making."
+  ],
+  "key_features": [
+    "Responsive Dashboard Layout with collapsible sidebar and mobile-optimized header for easy navigation.",
+    "Metric Cards displaying key performance indicators including value, percentage change, and trend icons.",
+    "Multiple Interactive Chart Components including line charts for revenue trend, bar charts for traffic sources, and donut charts for device distribution visualization.",
+    "Advanced Campaign Performance Data Table with sortable columns, search, filtering, and pagination features.",
+    "Simulated real-time data refresh functionality ensuring up-to-date insights.",
+    "Modern, clean UI design with branded color palette and smooth animations for an engaging user experience.",
+    "Use of TypeScript interfaces for strict typing and maintainability.",
+    "Integration of Lucide React icon library for customizable, beautiful icons."
+  ],
+  "user_flow_summary": [
+    "User lands on the home page and is automatically redirected to the dashboard.",
+    "User can navigate through the collapsible sidebar to access different dashboard sections (metrics, charts, campaign data).",
+    "Dashboard displays key metrics in card format summarizing critical KPIs with trend indicators.",
+    "User interacts with charts to visualize revenue trends over 30 days, traffic sources by channel, and device distribution percentages.",
+    "User can explore campaign performance in the data table, using sorting, searching, filtering, and pagination to analyze specific campaigns.",
+    "On mobile or tablet devices, the layout adjusts responsively with an optimized header and sidebar for ease of use.",
+    "User triggers data refresh for real-time updates and visual confirmations of data changes."
+  ],
+  "validation_criteria": [
+    "Dashboard must maintain full responsiveness across defined breakpoints (mobile to large desktop) with consistent UI and UX.",
+    "All metric cards accurately reflect the underlying mocked data and display correct percentage changes and icons.",
+    "Charts must render correctly with tooltips, axis labels, legends, and respond interactively to user input.",
+    "Data table functionalities—sorting, filtering, searching, pagination—must operate smoothly without errors.",
+    "Real-time simulated data refresh triggers visual updates to charts and metrics within an acceptable timeframe.",
+    "Codebase must pass ESLint, TypeScript strict type checks, and Prettier formatting consistently.",
+    "Accessibility standards must be met including ARIA attributes, keyboard navigation, and readable text contrast.",
+    "Build and deployment pipelines should successfully deploy the application to platforms like Vercel without runtime errors."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Recharts",
+      "Radix UI",
+      "Lucide React"
+    ],
+    "features": [
+      {
+        "name": "Dashboard Layout",
+        "description": "Main dashboard layout component with sidebar, header, and responsive design",
+        "files": [
+          "src/components/layout/DashboardLayout.tsx",
+          "src/components/layout/Sidebar.tsx",
+          "src/components/layout/Header.tsx"
+        ]
+      },
+      {
+        "name": "Dashboard Page",
+        "description": "Main dashboard page with metrics, charts, and data table",
+        "files": [
+          "src/app/dashboard/page.tsx",
+          "src/app/page.tsx"
+        ]
+      },
+      {
+        "name": "Metrics Cards",
+        "description": "Metric cards displaying key performance indicators with icons and change indicators",
+        "files": [
+          "src/components/dashboard/MetricCard.tsx"
+        ]
+      },
+      {
+        "name": "Charts Components",
+        "description": "Various chart components for data visualization including line, bar, and donut charts",
+        "files": [
+          "src/components/charts/LineChart.tsx",
+          "src/components/charts/BarChart.tsx",
+          "src/components/charts/DonutChart.tsx"
+        ]
+      },
+      {
+        "name": "Data Table",
+        "description": "Data table component for displaying campaign performance data with pagination",
+        "files": [
+          "src/components/dashboard/DataTable.tsx"
+        ]
+      },
+      {
+        "name": "Data Generation",
+        "description": "Mock data generation functions for metrics, charts, and campaign data",
+        "files": [
+          "src/lib/data.ts"
+        ]
+      },
+      {
+        "name": "Type Definitions",
+        "description": "TypeScript type definitions for dashboard data structures",
+        "files": [
+          "src/types/dashboard.ts"
+        ]
+      },
+      {
+        "name": "Utility Functions",
+        "description": "Utility functions for styling and common operations",
+        "files": [
+          "src/lib/utils.ts"
+        ]
+      },
+      {
+        "name": "Global Styles",
+        "description": "Global CSS styles and Tailwind configuration",
+        "files": [
+          "src/app/globals.css",
+          "tailwind.config.ts"
+        ]
+      }
+    ]
+  }
+}
