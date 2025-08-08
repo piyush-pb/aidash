@@ -5,10 +5,11 @@ import DashboardLayout from '@/components/layout/DashboardLayout';
 import DataTable from '@/components/dashboard/DataTable';
 import { generateCampaignData } from '@/lib/data';
 import { Search, Filter, Download } from 'lucide-react';
+import type { CampaignData } from '@/types/dashboard';
 
 export default function CampaignsPage() {
   const [isLoading, setIsLoading] = useState(true);
-  const [campaigns, setCampaigns] = useState([]);
+  const [campaigns, setCampaigns] = useState<CampaignData[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
 
@@ -28,7 +29,7 @@ export default function CampaignsPage() {
   }, []);
 
   // Filter campaigns based on search and status
-  const filteredCampaigns = campaigns.filter((campaign: any) => {
+  const filteredCampaigns = campaigns.filter((campaign) => {
     const matchesSearch = campaign.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesStatus = statusFilter === 'all' || campaign.status === statusFilter;
     return matchesSearch && matchesStatus;
